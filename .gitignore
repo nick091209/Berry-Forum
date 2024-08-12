@@ -1,0 +1,39 @@
+# Ignore the database connection file
+db_connection.php
+
+# Ignore environment variable files
+.env
+
+# Ignore Composer dependencies (if using Composer)
+vendor/
+
+# Ignore Node.js dependencies (if using Node.js)
+node_modules/
+
+# Ignore log files
+*.log
+
+# Ignore system files specific to Windows
+Thumbs.db
+Desktop.ini
+
+# Ignore IDE and editor files
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Ignore backup files
+*.bak
+*.tmp
+*.old
+
+# Ignore compiled files
+*.out
+*.exe
+
+# Ignore PHPStorm project files
+/.idea/
+
+# Ignore macOS system files (if sharing with macOS users)
+.DS_Store
