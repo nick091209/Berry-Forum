@@ -12,7 +12,7 @@
 
 <body>
     <nav>
-        <h1 class="logo"><span style="font-weight: bold;">Berry</span>Forum</h1>
+        <h1 class="logo"><a class="home_button" href="#"><span style="font-weight: bold;">Berry</span>Forum</a></h1>
         <div class="search-container">
             <i class="fa-solid fa-magnifying-glass"></i>
             <input class="searchbar" type="text" placeholder="Search topics...">
@@ -59,7 +59,7 @@
             </div>
         </div>
 
-        <a href="https://www.google.com" target="_blank" class="topic_link">
+        <a href="topics/announcements.php" class="topic_link">
             <div class="topic">
                 <div class="topic_icon">
                     <img src="img/announcement_icon.png" alt="Announcement Icon">

@@ -3,7 +3,15 @@ require '../db/db_connection.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST['username'];
-    $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
+    $password = $_POST['password'];
+    $confirm_password = $_POST['confirm_password'];
+
+    if ($password !== $confirm_password) {
+        header("Location: register.php?error=password_mismatch");
+        exit();
+    }
+
+    $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
     $query = $conn->prepare("SELECT id FROM users WHERE username = ?");
     $query->bind_param("s", $username);
@@ -14,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         header("Location: register.php?error=username_taken");
     } else {
         $stmt = $conn->prepare("INSERT INTO users (username, password) VALUES (?, ?)");
-        $stmt->bind_param("ss", $username, $password);
+        $stmt->bind_param("ss", $username, $hashed_password);
 
         if ($stmt->execute()) {
             header("Location: login.php?success=registered");

@@ -6,7 +6,9 @@ if (!isset($_SESSION['user_id'])) {
     exit();
 }
 
+require_once '../../db/db_connection.php';
 
+$user_id = $_SESSION['user_id'];
 ?>
 
 <!DOCTYPE html>
@@ -17,7 +19,8 @@ if (!isset($_SESSION['user_id'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Manage Profile</title>
     <link rel="stylesheet" href="../../styles/style.css">
-    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="../../img/favicon.ico">
+    <script src="https://kit.fontawesome.com/740dbd682a.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -32,9 +35,9 @@ if (!isset($_SESSION['user_id'])) {
         </ul>
     </nav>
     <div class="profile_page">
-        <a href="../logout.php" class="logout_button">Logout</a>
-        <div class="profile-page">
-            <h1>Manage Your Profile</h1>
+        <div class="manage_profile_tile">
+            <h1>Manage Profile</h1>
+            <a href="../logout.php" class="login_button">Logout</a>
         </div>
     </div>
 </body>

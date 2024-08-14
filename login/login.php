@@ -17,7 +17,7 @@
             <input class="searchbar" type="text" placeholder="Search topics...">
         </div>
         <ul>
-            <li><a href="../index.php" class="login_button">return to home</a></li>
+            <li><a href="../index.php" class="login_button">r</a></li>
         </ul>
     </nav>
     <div class="loginpage">
